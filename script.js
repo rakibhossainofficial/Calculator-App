@@ -1,3 +1,6 @@
+// █ ============ Calculate Number   ========== █
+
+
 let input = document.getElementById('inputBox');
 let buttons = document.querySelectorAll('button');
 
@@ -9,7 +12,6 @@ arr.forEach(button => {
             string = eval(string);
             input.value = string;
         }
-
         else if(e.target.innerHTML == 'AC'){
             string = "";
             input.value = string;
@@ -24,4 +26,21 @@ arr.forEach(button => {
         }
     })
 });
+
+
+// █ ============ Copy Text   ========== █
+
+function copyText() {
+    var input = document.getElementById("inputBox");
+    input.select();
+    document.execCommand("copy");
+
+    var popup = document.getElementById("popup");
+    popup.classList.add("show");
+
+    setTimeout(function() {
+      popup.classList.remove("show");
+    }, 2000); // Pop-up will disappear after 2 seconds
+}
+
 
